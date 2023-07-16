@@ -1,0 +1,310 @@
+.App{
+  overflow-x: hidden;
+  position: absolute;
+  margin-left: 0;
+  left: 0;
+  top:0;
+  background-color: rgb(216, 219, 226);
+  
+}
+/*NavBar*/
+nav{
+  background-color: black;
+  display: grid;
+  grid-template-columns: 60% 40%;
+}
+
+#logo{
+  width: 30vw;
+  margin-left:10%;
+  margin-top: 5%;
+}
+
+/*Cart Icon*/
+#cart{
+  margin-right: 5%;
+  margin-left: 40%;
+}
+#my-cart{
+  color: white;
+  height: 10vh;
+  width: 10vw;
+  margin-top: 15%;
+
+}
+
+
+/*Buttons*/
+.buttons{
+  height: 10vh;
+  font-weight: bolder;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width:40%;
+  margin-bottom: 2%;
+  margin-top: 5%;
+}
+.button-88 {
+
+  font-family: inherit;
+  font-size: 15px;
+  padding: 0.7em 1.4em 0.7em 1.1em;
+  color: white;
+  background: linear-gradient(0deg, rgba(20,167,62,9) 90%, rgba(102,247,113,9) 100%);
+  border: none;
+  box-shadow: 0 0.7em 1.5em -0.5em #14a73e98;
+  letter-spacing: 0.05em;
+  border-radius: 20em;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  text-align: center;
+}
+
+.button-88:hover {
+  box-shadow: 0 0.5em 1.5em -0.5em #14a73e98;
+}
+
+.button-88:active {
+  box-shadow: 0 0.3em 1em -0.5em #14a73e98;
+}
+.links{
+  text-decoration: none;
+}
+
+/*Headings*/
+h1,h2, h3{
+  text-align: center;
+}
+
+/*Paragraphs*/
+
+p{
+  width: 80%;
+  margin: 0 auto;
+}
+
+/*Reviews*/
+.review{
+  padding-top: 3vh;
+  padding-bottom: 2vh;
+  box-shadow: 5vw 3vh whitesmoke;
+  background-color: white;
+  border-radius: 2em;
+  width:80vw;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
+}
+
+/*Map*/
+#map{
+  position: relative;
+  width: 80vw;
+  height: 80vh;
+    margin-left: auto;
+  margin-right: auto;
+
+}
+
+/*Shop Page*/
+
+.pages{
+  width: 100vw;
+  
+}
+/*Product*/
+
+.product{
+  padding: 2%;
+  background-color: white;
+  text-align: center;
+ 
+  margin: 0 auto;
+   margin-top: 5%;
+  width: 90vw;
+  border-radius: 2em;
+
+}
+.product-img{
+  height: 50vh;
+  width: 99%;
+  position: relative;
+  left: 0;
+  
+}
+
+/*Cart Page*/
+
+#empty-cart{
+  height: 60vh;
+}
+
+#full-cart{
+  min-height: 60vh;
+}
+
+#cart-card{
+  background-color: white;
+  padding: 5%;
+  width: 80%;
+  margin: 15% auto;
+  border-radius: 2em;
+}
+
+.cart-item{
+  display: grid;
+  grid-template-columns: 70% 30%;
+  color: black;
+}
+#cart-total{
+  color: maroon;
+}
+/*Footer*/
+footer{
+  margin-top: 0;
+  background-color: black;
+  color: white;
+  height: 20vh;
+}
+/**********************************************************************************************/
+@media screen and (min-width:450px){
+
+  /*Reviews*/
+  .review{
+    width: 50vw;
+  }
+/*Products*/
+.product{
+  width: 50vh;
+}  
+/*Cart*/
+#cart{
+  margin-right: 5%;
+  margin-left: 70%;
+}
+#my-cart{
+  color: white;
+  height: 5vh;
+  width: 5vw;
+  margin-top: 10vh;
+
+}
+
+/*Buttons*/
+.buttons{
+
+  width:35%;
+ 
+}
+
+}
+
+/**********************************************************************************************/
+@media screen and (min-width:500px) and (max-width:599px){
+  #reviews-container:nth-child(odd) , #products-container:nth-child(even){
+    margin-left: 30%;
+
+  }
+   #reviews-container:nth-child(even), #products-container:nth-child(odd){
+    margin-right: 30%;
+
+
+  }
+  .review{
+        width: 55vw;
+
+  }
+}
+/*************************************************************************************************/
+@media screen and (min-width:600px) {
+  /*Navigation*/
+  nav{
+    height: 15vh;
+  }
+
+/*Logo*/
+#logo{
+    width: 15vw;
+  margin-left:10%;
+  margin-top: 2%;
+}
+
+/*Cart*/
+
+#my-cart{
+  margin-top: 5vh;
+
+}
+/*Buttons*/
+.buttons{
+
+  width:25%;
+ 
+}
+.pages{
+  margin-top: 7.5%;
+}
+
+
+   .cards-container{
+display: grid;
+grid-template-columns: 50% 50%;
+  }
+ 
+  .review {
+        width: 35vw;
+
+  }
+  
+}
+
+/*******************************************************************************************************/
+@media screen and (min-width:750px){
+  .cards-container{
+    display: grid;
+    grid-template-columns: 33% 33% 34%;
+  }
+   .review {
+        width: 25vw;
+          box-shadow: 3vw 2vh whitesmoke;
+  }
+  .product{
+  width: 80%;
+
+  }
+  /*Buttons*/
+.buttons{
+
+  width:20%;
+ 
+}
+ 
+}
+/*******************************************************************************************************/
+@media screen and (min-width:1000px){
+  .cards-container{
+    display: grid;
+    grid-template-columns: 24% 24% 24% 24%;
+  }
+   .review {
+        width: 20vw;
+          box-shadow: 3vw 2vh whitesmoke;
+
+
+  }
+  .product{
+  width: 80%;
+
+  }
+
+  /*Buttons*/
+.buttons{
+
+  width:15%;
+ 
+}
+ 
+}
