@@ -4,9 +4,12 @@
 
 
 //import local modules
+import SendText from "../components/SendText"
 
 const Home = () => {
   return <>
+
+  <SendText/>
   
   </>
 }
