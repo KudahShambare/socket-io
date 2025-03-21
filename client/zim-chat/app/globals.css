@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+ 
+  background: black;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+#chat-box{
+  position: fixed;
+  top:85vh;
+}
+#chat-messages{
+  height: 85vh;
+  width: 100%;
+  background-color: #e6dbdb;
+  color: white;
+  border: #0a0a0a 5px solid;
+}
+input{
+  height: 5vh;
+  border: #0a0a0a 5px solid;
+
+}
+button{
+  height: 5vh;
+  background-color: rgb(178, 182, 178);
+}

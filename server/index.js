@@ -19,20 +19,43 @@ const io = new Server(httpServer, {
   },
 });
 
+let users = [];
+let messages = [];
+
 // Socket.io connection
 io.on("connection", (socket) => {
   console.log(socket.id);
   
-    console.log("Client connected");
-  
+  users.push(socket.id);
+    console.log("Client connected",socket.id);
+
+    let obj={
+      id:socket.id,
+      name:"",
+      email:"",
+      allUsers:users
+    }
+
+      socket.broadcast.emit("announcement",obj
+    );
+
     socket.on("message", (message) => {
-      console.log("Received message: ", message);
+      // Create message object with id and message content
+      const msgObject = {
+        id: socket.id,
+        message: message
+      };
+    
+      // Emit only the new message to all clients
+      io.emit("message", msgObject);
+    });
     
 
-    });
-
+  
     socket.on("disconnect", () => {
         console.log("Client disconnected"); 
+
+        socket.broadcast.emit("announcement","User disconnected");
     })
 
 })
@@ -53,3 +76,5 @@ const PORT = process.env.PORT || 5000;
 httpServer.listen(PORT, () => {
   console.log(`Server listening on http://localhost:${PORT}`);
 })
+
+
